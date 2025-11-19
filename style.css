@@ -1,0 +1,273 @@
+/* --- متغيرات الألوان والتصميم --- */
+:root {
+    --color-primary: #1A73E8;
+    --color-accent: #0F4C81;
+    --color-background: #F7F9FC;
+    --color-card: #FFFFFF;
+    --color-border: #D9DFE7;
+    --color-heading: #0D1C2E;
+    --color-text: #333;
+    --color-text-light: #555;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 8px 16px rgba(0, 0, 0, 0.08);
+    --border-radius: 10px;
+    --transition-main: all 0.25s ease-in-out;
+}
+
+/* مسافة أعلى واضحة */
+.form-container .form-content {
+    padding-top: 35px !important;
+}
+
+/* --- الجسم العام --- */
+body {
+    font-family: "Cairo", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    direction: rtl;
+    line-height: 1.6;
+}
+
+/* --- الحاوية الأساسية --- */
+.form-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: var(--color-card);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    overflow: hidden;
+}
+
+/* ⚡ NEW: Business identity block */
+.business-info {
+    margin: 0 0 20px 0;
+}
+
+.business-info div {
+    background: #f2f2f2;
+    border: 1px solid #ddd;
+    box-shadow: var(--shadow-light);
+}
+
+/* --- رأس النموذج الجديد --- */
+.hero-header {
+    position: relative;
+    height: 260px;
+    background: linear-gradient(135deg, #1a73e8, #0f4c81);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-header .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(2px);
+}
+
+.hero-header .hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-header .hero-logo {
+    width: 130px;
+    height: auto;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.15));
+}
+
+.hero-header .hero-title {
+    font-size: 2rem;
+    color: #fff;
+    margin: 5px 0 10px 0;
+    font-weight: 700;
+}
+
+.hero-header .hero-subtitle {
+    font-size: 1.1rem;
+    color: #e9f0ff;
+    font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .hero-header {
+        height: 220px;
+    }
+    .hero-header .hero-logo {
+        width: 100px;
+    }
+    .hero-header .hero-title {
+        font-size: 1.5rem;
+    }
+    .hero-header .hero-subtitle {
+        font-size: 0.95rem;
+    }
+}
+
+/* --- أقسام النموذج --- */
+.form-content {
+    padding: 20px 40px 40px 40px;
+}
+
+.section-card {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    margin-bottom: 25px;
+    padding: 25px;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-main);
+}
+
+.section-card:focus-within {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+}
+
+h2 {
+    color: var(--color-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-right: 15px;
+    border-right: 5px solid var(--color-primary);
+}
+
+/* --- حقول الإدخال --- */
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background-color: #FDFDFD;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1rem;
+    color: var(--color-text);
+    transition: var(--transition-main);
+}
+
+input[type="text"]:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+    background-color: #fff;
+}
+
+/* --- الجدول --- */
+.table-container {
+    overflow-x: auto;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid var(--color-border);
+    padding: 12px;
+    text-align: right;
+}
+
+tbody tr:hover {
+    background-color: #eef5ff;
+}
+
+/* --- زر الإرسال --- */
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: var(--transition-main);
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-accent);
+}
+
+/* --- رسائل النجاح والخطأ --- */
+#success-message,
+#error-message {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+}
+
+#success-message {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+#error-message {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+/* --- روابط Richline و WhatsApp --- */
+.contact-footer {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.contact-footer .footer-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: var(--transition-main);
+}
+
+.contact-footer .footer-link:hover {
+    color: var(--color-accent);
+}
+
+/* --- Footer الحقوق --- */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+}

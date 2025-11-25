@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://richline-lab.github.io/business-contact-form/sitemap.xml
